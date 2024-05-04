@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+SC:wght@400;500&family=Jersey+15&family=Poiret+One&display=swap');
+/* импорт кастомного шрифта */
+
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+/* * - обращение ко всем элементам и изменение их свойств*/
+body {
+    /* background-color: #0a301e; */
+       /* background-color - для цвета фона страницы */
+    background-color: rgb(145, 138, 138);
+    /* способ задания шрифта */
+      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+      /* font-family - сам шрифт, перечисление шрифтов и их использование в случае отсутствии их в браузере */
+      /* font-family: "Poiret One", sans-serif;
+      /* кастомный шрифт */
+      /* font-size: 16px;
+         font-weight: 400;
+         font-style: normal; */
+      /* font-size - для размера шрифта, в пикселях px */
+      /* font-weight - для жирности шрифта, 0-500 - обычный шрифт(normal), 500-900 - жирный(bald) */
+    color: #b1a00d;
+    /* color - для цвета текста */
+    font: normal 18px 'Poiret One', sans-serif;
+    /* еще один способ задания шрифта */
+}
+
+a {
+  color: cadetblue;
+  text-decoration: none;
+}
+/* обращение ко всем ссылкам */
+
+a:hover {
+  text-decoration: underline;
+}
+/* обращение ко всем ссылкам в определенном состоянии, hover - при наведении */
+
+a:active {
+  color:blue;
+}
+/* обращение ко всем ссылкам, нажатых мышью, но не отпущенными  */
+
+/* a:visited {
+  color:gray;
+} */
+/* обращение ко всем посещенным ссылкам */
+
+.card {
+  padding: 15px 20px;
+  background: red;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.card h2 {
+  margin-bottom: 10px;
+}
+.avatar {
+  width: 250px;
+  /* width - ширина блока, пикча в данном случае */
+  border-radius: 50%;
+  /* border-radius: 28px; */
+  /* border-radius - закругление границ блока*/
+  box-shadow: 0px 0px 5px 12px rgba(0,0,0,0.25);
+  /* box-shadow - тень для элемента, все параметры наглядно можно посмотреть через просмотр кода элемента(картинки в данном случае) в браузере */
+}
+/* .* - обращение к классу class  */
+#avatar {
+  width: 250px;
+  /* width - ширина блока, пикча в данном случае */
+  border-radius: 28px;
+  /* border-radius: 28px; */
+  box-shadow: 4px 4px 14px rgba(0,0,0,0.25);
+/* border-radius - закругление границ блока*/
+}
+/* #* - обращение к id  */
+.avatar1 {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 12px rgba(0,0,0,0.25);
+}
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .info { 
+    text-align: center;
+    display: block;
+  }
+
+}
+
+.info-text {
+  margin-left: 40px;
+}
+
+.info-text h4 {
+  margin-bottom: 10px;
+}
+.info p {
+   color: darkviolet; 
+   margin: 0;
+   font-style: italic;
+   font-weight: bold;
+   text-decoration: none;
+   /* text-transform: capitalize; */
+   /* letter-spacing: 10px; */
+   /* word-spacing: 42px; */
+}
+/* обращение ко всем параграфам p в классе info*/
+/* margin - отступ между элементами */
+/* font-style - для стиля шрифта(наклонный и тп) */
+/* text-decoration - для украшения шрифта(underline - подчеркнутый, line-through - зачеркнутый и тп */
+/* text-transform - для изменения текста(capitalize - каждое слово с большой буквы, lowercase - нижний регистр, uppercase - верхний регистр */
+/* letter-spacing - для расстояния между символами */
+/* word-spacing - для расстояния между словами */
+
+/* Box Model */
+.video {
+  background: red;
+  /* padding: 15px; */
+  /* padding - внутренние отступы в блоке */
+  /* padding: 15px 40px; */
+  /* внутренние отступы, 15 по вертикали, 40 по горизонтали */
+  /* padding: 15px 20px 25px 30px; */
+  /* внутренние отступы, top right bottom left */
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  /* внутренние отступы, аналогично предыдущему, для margin так же */
+  border: 5px solid blue;
+  /* border x y z - внешняя граница, x - размер границы, y - тип границы, z - цвет границы */
+  border-bottom-style: dotted;
+  /* для стилизации нижней внешней границы */
+  border-top-width: 15px;
+  border-right-color: purple;
+  margin: 20px;
+  /* margin - внешние отступы */
+}
+
+.container {
+  /* width: 750px; */
+  /* размер контейнера, в %, в px */
+  max-width: 750px;
+  /* max-width - для максимального размера, адаптация под устройство */
+  margin: auto;
+  /* margin: auto - для центрирования всех элементов */
+  padding-top: 30px;
+}
+.box-model > div {
+  float: left;
+  /* float для упорядачивания элементов */
+  background: black;
+  height: 200px;
+  width: 25%;
+  border: 4px solid red;
+  box-sizing: border-box;
+  /* box-sizing - размер всего блока, учитывая его границы, внутренние границы */
+}
+/* > перед элементам к которым обращаются, для обращения только к дочерним элементам */
+
+.bg-yellow {
+  background: #fff9dc;
+}
+
+.bg-green {
+  background: #e5ffe7;
+}
+
+.bg-red {
+  background: #ffe5e5;
+}
+.list1 {
+  padding: 0 20px;
+}
+
+.list1 li {
+  color: #86898f;
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding-bottom: 10px;
+}
+
+.table td:nth-child(2), .table td:nth-child(3) {
+  color: red;
+}
+/* td:nth-child(x) - псевдо селектор, несколько через , */
+
+/* .table tr:nth-child(even) {
+  background: red;
+} */
+
+.other {
+  list-style: none;
+  padding: 0;
+}
+/* list-style - стиль списка */
+
+.other li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+  text-align: center
+}
+/* text-align - выравнивание текста */
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  color: red;
+}
+/* display - определяет тип отображения элемента */
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  /* border - тип границы поля ввода input */
+  background: transparent;
+  /* transparent - прозрачный */
+  border-bottom: 1px solid #ccc;
+  color: black;
+  padding: 15px 0 10px;
+  outline: none;
+  /* outline - граница области ввода при выделении */
+  font-family: inherit;
+  /* font-family - шрифт в поле ввода, inherit - наследуется общий */
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.row > .form-group {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+  margin-right: 0;
+}
+/* last-child - последний дочерний элемент */
+.row > .form-group:first-child {
+  margin-right: 20px;
+}
+/* аналогично last-child */
+
+.button {
+  color: white;
+  padding: 15px 20px;
+  background: #111;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  /* cursor - изменение курсора мыши при наведении на элемент, pointer - палец */
+}
+
+.button:hover {
+  opacity: 0.9;
+  /* opacity - прозрачность */
+}
+
+/* Position */
+
+.position {
+  position: relative;
+  /* position - позиция элемента, relative - относительно другого элемента */
+  border: 4px solid black;
+  margin-top: 40px;
+  padding: 20px;
+  height: 300px;
+}
+
+.box {
+  /* position: absolute;
+  bottom: 0;
+  right: 0; */
+  /* position - позиция элемента, absolute - относительно окна браузера */
+  /* top: 150px;
+  left: 0px; */
+  position: fixed;
+  /* position - позиция элемента, fixed - относительно окна экрана */
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: red;
+}
